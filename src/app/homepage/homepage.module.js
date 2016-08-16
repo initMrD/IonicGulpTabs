@@ -1,7 +1,7 @@
 // Dash module
-(function() {
-  'use strict';
+(function () {
+    'use strict';
 
-  angular.module('starter.homepage', []);
+    angular.module('starter.homepage', []);
 
 })();

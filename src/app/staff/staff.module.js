@@ -1,7 +1,7 @@
 // Chats module
-(function() {
-  'use strict';
+(function () {
+    'use strict';
 
-  angular.module('starter.staff', []);
+    angular.module('starter.staff', []);
 
 })();

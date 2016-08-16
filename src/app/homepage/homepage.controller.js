@@ -4,16 +4,16 @@
 
 // Why?: When your code is minified and bundled into a single file for deployment to a production server, you could have collisions of variables and many global variables. An IIFE protects you against both of these by providing variable scope for each file.
 
-(function() {
+(function () {
     'use strict';
 
     angular
         .module('starter.homepage')
         .controller('HomepageController', HomepageController);
 
-  HomepageController.$inject = ['$scope'];
+    HomepageController.$inject = ['$scope'];
 
     function HomepageController($scope) {
-      
+
     }
 })();

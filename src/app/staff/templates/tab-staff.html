@@ -1,7 +1,7 @@
 <ion-view view-title="人员">
   <ion-content>
     <ion-list>
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="staff in staff" type="item-text-wrap" href="#/tab/staff/{{staff.id}}">
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-class="staff.lastText" ng-repeat="staff in staff" type="item-text-wrap" href="#/tab/staff/{{staff.id}}">
         <img ng-src="{{staff.face}}">
         <h2>{{staff.name}}</h2>
         <p>{{staff.lastText}}</p>

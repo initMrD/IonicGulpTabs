@@ -10,6 +10,9 @@
 
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above -->
     <!-- compiled css output -->
+    <link href="lib/angular-animate/animate.css" rel="stylesheet">
+    <link href="lib/angular-material/materialize.min.css" rel="stylesheet">
+    <link href="css/mAnimate.css" rel="stylesheet">
     <!-- NOTE: the build-endbuild tags are used by gulp-htmlreplace - DO NOT REMOVE -->
     <!-- build:sass -->
     <link href="css/ionic.app.css" rel="stylesheet">
@@ -21,7 +24,9 @@
     <!-- inject:js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
     <script src="lib/collide/collide.js"></script>
-    <script src="lib/ionic-ion-tinder-cards/ionic.tdcards.js"></script>
+    <script src="lib/jquery-2.1.1.min.js"></script>
+    <script type="application/javascript" src="lib/angular-material/materialize.min.js"></script>
+
     <!-- endinject -->
     <!-- endbuild -->
 
@@ -31,8 +36,10 @@
     <!-- your app's js -->
     <!-- NOTE: the build-endbuild tags are used by gulp-htmlreplace - DO NOT REMOVE -->
     <!-- build:js -->
+    <!-- login module -->
+    <script src="app/login/login.controller.js"></script>
 
-    <!-- chats module -->
+    <!-- staff module -->
     <script src="app/staff/staff.module.js"></script>
     <script src="app/staff/controllers/staff.controller.js"></script>
     <script src="app/staff/controllers/staff_details.controller.js"></script>

@@ -1,0 +1,60 @@
+.fade-in-left-item.ng-enter {
+    -webkit-animation: fadeInLeft  1s;
+    -moz-animation:     fadeInLeft 1s;
+    -o-animation:       fadeInLeft 1s;
+    animation:          fadeInLeft 1s;
+}
+
+.fade-in-left-item.ng-enter-stagger {
+    -webkit-animation-delay: 200ms;
+    animation-delay: 200ms;
+}
+
+.fade-in-right-item.ng-enter {
+    -webkit-animation: fadeInRight  1s;
+    -moz-animation:     fadeInRight 1s;
+    -o-animation:       fadeInRight 1s;
+    animation:          fadeInRight 1s;
+}
+
+.fade-in-right-item.ng-enter-stagger {
+    -webkit-animation-delay: 200ms;
+    animation-delay: 200ms;
+}
+
+.fade-in-down-item.ng-enter {
+    -webkit-animation: fadeInDownBig 1s;
+    -moz-animation:    fadeInDownBig 1s;
+    -o-animation:      fadeInDownBig 1s;
+    animation:         fadeInDownBig 1s;
+}
+
+.fade-in-down-item.ng-enter-stagger {
+    -webkit-animation-delay: 200ms;
+    animation-delay: 200ms;
+}
+
+.fade-in-item.ng-enter {
+    -webkit-animation: fadeIn 1s;
+    -moz-animation:    fadeIn 1s;
+    -o-animation:      fadeIn 1s;
+    animation:         fadeIn 1s;
+
+}
+
+.fade-in-item.ng-enter-stagger {
+    -webkit-animation-delay: 200ms;
+    animation-delay: 200ms;
+}
+
+.zoom-in.ng-enter {
+    -webkit-animation: zoomIn 1s;
+    -moz-animation:    zoomIn 1s;
+    -o-animation:      zoomIn 1s;
+    animation:         zoomIn 1s;
+}
+
+.zoom-in.ng-enter-stagger {
+    -webkit-animation-delay: 200ms;
+    animation-delay: 200ms;
+}

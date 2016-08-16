@@ -8,6 +8,7 @@
 angular.module('starter', [
     'ionic',
 
+    'starter.directive',
     'starter.services',
     'starter.routes',
     'starter.configs',

@@ -11,9 +11,27 @@
         .module('starter.homepage')
         .controller('HomepageController', HomepageController);
 
-    HomepageController.$inject = ['$scope'];
+    HomepageController.$inject = ['$scope', '$ionicLoading','$ionicPopup','$state'];
 
-    function HomepageController($scope) {
-
+    function HomepageController($scope, $ionicLoading,$ionicPopup,$state) {
+        $scope.loading = function () {
+            $ionicLoading.show({
+                template: '加载中，请稍后...'
+            });
+            setTimeout(
+                function () {
+                    $ionicLoading.hide();
+                }, 1500
+            );
+        };
+        $scope.alert = function () {
+            $ionicPopup.alert({
+                title: '提示',
+                template: "这是一个提示"
+            });
+        };
+        $scope.exit = function () {
+            $state.go('login')
+        };
     }
 })();

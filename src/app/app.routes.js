@@ -70,7 +70,8 @@ angular.module('starter.routes', [])
                 url: '/message',
                 views: {
                     'tab-message': {
-                        templateUrl: 'app/message/tab-message.html'
+                        templateUrl: 'app/message/tab-message.html',
+                        controller: 'MessageController'
                     }
                 }
             });

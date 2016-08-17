@@ -14,10 +14,12 @@ angular.module('starter', [
     'starter.configs',
 
     'starter.homepage',
+    'starter.message',
     'starter.staff',
     'starter.login',
 
-    'templates'
+    'templates',
+    'jett.ionic.filter.bar'
 ])
 
     .run(function ($ionicPlatform) {

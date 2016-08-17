@@ -1,6 +1,11 @@
 <ion-view view-title="首页">
     <ion-content class="padding">
         <h2>Welcome to Ionic</h2>
-        Button class添加 waves-effect waves-lights 会有水波效果
+        class添加 waves-effect waves-lights 点击会有水波效果
+        <button class="button waves-effect waves-lights button-full button-balanced">按钮</button>
+        <div class="waves-effect waves-lights" style="width: 100%;height: 40px">DIV也能有水波效果</div>
+        <button class="button waves-effect waves-lights button-assertive" ng-click="alert()">alert</button>
+        <button class="button waves-effect waves-lights button-positive" ng-click="loading()">loading</button>
+        <button class="button waves-effect waves-lights button-positive" ng-click="exit()">exit</button>
     </ion-content>
 </ion-view>

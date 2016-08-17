@@ -255,12 +255,13 @@ gulp.task('index', function () {
             'ionic': 'lib/ionic/js/' + files.ionicbundle
         }))
         .pipe(gulp.dest(paths.dist + '/.'));
-    gulp.src('./src/lib/collide/collide.js').pipe(gulp.dest('./www/lib/collide'));
     gulp.src('./src/lib/angular-animate/animate.css').pipe(gulp.dest('./www/lib/angular-animate'));
     gulp.src('./src/lib/angular-material/materialize.min.css').pipe(gulp.dest('./www/lib/angular-material'));
+    gulp.src('./src/lib/angular-material/materialize.min.js').pipe(gulp.dest('./www/lib/angular-material'));
+    gulp.src('./src/lib/ionic-filter-bar/ionic.filter.bar.min.css').pipe(gulp.dest('./www/lib/ionic-filter-bar'));
+    gulp.src('./src/lib/ionic-filter-bar/ionic.filter.bar.min.js').pipe(gulp.dest('./www/lib/ionic-filter-bar'));
     gulp.src('./src/css/mAnimate.css').pipe(gulp.dest('./www/css'));
     gulp.src('./src/lib/jquery-2.1.1.min.js').pipe(gulp.dest('./www/lib'));
-    gulp.src('./src/lib/angular-material/materialize.min.js').pipe(gulp.dest('./www/lib/angular-material'));
 });
 
 gulp.task('install', ['git-check'], function () {

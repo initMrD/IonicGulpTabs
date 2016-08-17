@@ -11,9 +11,9 @@
         .module('starter.homepage')
         .controller('HomepageController', HomepageController);
 
-    HomepageController.$inject = ['$scope', '$ionicLoading','$ionicPopup','$state'];
+    HomepageController.$inject = ['$scope', '$ionicLoading', '$ionicPopup', '$state', 'locals'];
 
-    function HomepageController($scope, $ionicLoading,$ionicPopup,$state) {
+    function HomepageController($scope, $ionicLoading, $ionicPopup, $state, locals) {
         $scope.loading = function () {
             $ionicLoading.show({
                 template: '加载中，请稍后...'

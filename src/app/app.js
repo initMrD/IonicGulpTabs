@@ -16,6 +16,7 @@ angular.module('starter', [
     'starter.homepage',
     'starter.message',
     'starter.staff',
+    'starter.staff.services',
     'starter.login',
 
     'templates',

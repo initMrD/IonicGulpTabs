@@ -1,11 +1,8 @@
 {
-  "constants": {
-    "APP": {
-      "devMode": false
-    },
-    "ServerConfiguration": {
-      "baseApiUrl": "http://staging.com/api/v1/",
-      "domain": "http://staging.com"
-    }
+  "ENV": {
+    "devMode": true,
+    "apiUrl": "http://localhost:3000/api/v1/",
+    "version": "0.0.1",
+    "hotcodeVersion": ".160721"
   }
 }

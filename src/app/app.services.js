@@ -28,4 +28,33 @@ angular.module('starter.services', [])
                 return JSON.parse($window.localStorage[key] || '{}');
             }
         };
+    }])
+    .factory('network', ['$resource', '$rootScope', '$ionicPopup', 'ENV', function ($resource, $rootScope, $ionicPopup, ENV) {
+        //API地址
+        var baseUrl = ENV.apiUrl;
+        //登录
+        var login = $resource(baseUrl + "v1/security/login");
+        //监听错误的广播
+        $rootScope.$on('network.error', function (work) {
+            $ionicPopup.alert({
+                title: '提示',
+                template: work
+            });
+        });
+        return {
+            login: function (username, password) {
+                return login.save(
+                    {
+                        username: username,
+                        password: password
+                    },
+                    function (response) {
+                        $rootScope.$broadcast('network.loginSuccess', response);
+                    },
+                    function (error) {
+                        $rootScope.$broadcast('network.error', '网络错误');
+                    }
+                )
+            }
+        };
     }]);

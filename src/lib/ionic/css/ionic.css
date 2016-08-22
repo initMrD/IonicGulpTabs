@@ -5472,7 +5472,7 @@ ion-tabs.tabs-color-active-dark .tab-item {
   left: 0;
   bottom: 0;
   right: 0;
-  background: transparent;
+  background: rgba(0, 0, 0, 0.5);
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;

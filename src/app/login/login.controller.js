@@ -18,8 +18,8 @@
         $scope.login = function () {
             network.login($scope.userInfo.username, $scope.userInfo.password);
         };
-        $scope.$on('network.loginSuccess', function (res) {
-            console.info(res)
+        $scope.$on('network.loginSuccess', function (evnet,data) {
+            console.info(data)
             $state.go('tab.homepage');
         });
     }

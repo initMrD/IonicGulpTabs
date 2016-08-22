@@ -33,12 +33,12 @@ angular.module('starter.services', [])
         //API地址
         var baseUrl = ENV.apiUrl;
         //登录
-        var login = $resource(baseUrl + "v1/security/login");
+        var login = $resource(baseUrl + "v2/security/login");
         //监听错误的广播
-        $rootScope.$on('network.error', function (work) {
+        $rootScope.$on('network.error', function (evnet,data) {
             $ionicPopup.alert({
                 title: '提示',
-                template: work
+                template: data
             });
         });
         return {

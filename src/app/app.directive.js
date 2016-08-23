@@ -2,7 +2,7 @@
  * Created by initmrd on 16/8/16.
  */
 angular.module('starter.directive', [])
-    
+//下拉图片放大
     .directive('elasticHeader', function ($ionicScrollDelegate) {
         return {
             restrict: 'A',
@@ -49,6 +49,40 @@ angular.module('starter.directive', [])
 
                     ticking = false;
                 }
+            }
+        }
+    })
+    //隐藏tabs
+    .directive('hideTabs', function ($rootScope) {
+        return {
+            restrict: 'AE',
+            link: function ($scope) {
+                $scope.$on('$ionicView.beforeEnter', function () {
+                    $rootScope.hideTabs = 'tabs-item-hide';
+                });
+                $scope.$on('$destroy', function () {
+                    $rootScope.hideTabs = '';
+                })
+            }
+        }
+    })
+    //隐藏显示返回键
+    .directive('hideBackButton', function ($rootScope) {
+        return {
+            restrict: 'AE',
+            link: function ($scope) {
+                $scope.$on('$ionicView.beforeEnter', function () {
+                    $rootScope.hideBackButtonFlag = true;
+                    $rootScope.hideBackButton = 'hide';
+                });
+                $scope.$on('$ionicView.afterEnter', function () {
+                    $rootScope.hideBackButtonFlag = false;
+                });
+                $scope.$on('$ionicView.leave', function () {
+                    if($rootScope.hideBackButtonFlag != true){
+                        $rootScope.hideBackButton = '';
+                    }
+                })
             }
         }
     });

@@ -79,7 +79,7 @@ angular.module('starter.directive', [])
                     $rootScope.hideBackButtonFlag = false;
                 });
                 $scope.$on('$ionicView.leave', function () {
-                    if($rootScope.hideBackButtonFlag != true){
+                    if ($rootScope.hideBackButtonFlag != true) {
                         $rootScope.hideBackButton = '';
                     }
                 })

@@ -24,19 +24,50 @@ angular.module('starter', [
     'jett.ionic.filter.bar'
 ])
 
-    .run(function ($ionicPlatform) {
-
+    .run(function ($ionicPlatform, ENV, $location, $ionicLoading, $ionicHistory) {
+        //正式环境关闭console
+        if (window.console) {
+            if (!ENV.devMode) {
+                for (i in console) {
+                    console[i] = function () {
+                    };
+                }
+            }
+        }
         $ionicPlatform.ready(function () {
             // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
             // for form inputs)
             if (window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {
+                //弹出键盘设置是否显示done和左右箭头
                 cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+                //弹出键盘时是否滚动屏幕
                 cordova.plugins.Keyboard.disableScroll(true);
-
             }
             if (window.StatusBar) {
-                // org.apache.cordova.statusbar required
                 StatusBar.styleDefault();
             }
+            //返回键设置,双击返回键退出
+            var exit = false;
+            $ionicPlatform.registerBackButtonAction(function (e) {
+                e.preventDefault();
+                if ($location.path() == '/homepage' || $location.path() == '/login') {
+                    if (exit) {
+                        ionic.Platform.exitApp();
+                    } else {
+                        exit = true;
+                        $ionicLoading.show({
+                            noBackdrop: true,
+                            template: '再按一次退出系统',
+                            duration: 1500
+                        });
+                        setTimeout(function () {
+                            exit = false;
+                        }, 1500);
+                    }
+                } else if ($ionicHistory.backView()) {
+                    $ionicHistory.goBack();
+                }
+                return false;
+            }, 101);
         });
     })

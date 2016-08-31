@@ -261,7 +261,9 @@ gulp.task('index', function () {
     gulp.src('./src/lib/ionic-filter-bar/ionic.filter.bar.min.css').pipe(gulp.dest('./www/lib/ionic-filter-bar'));
     gulp.src('./src/lib/ionic-filter-bar/ionic.filter.bar.min.js').pipe(gulp.dest('./www/lib/ionic-filter-bar'));
     gulp.src('./src/css/mAnimate.css').pipe(gulp.dest('./www/css'));
+    gulp.src('./src/lib/angular-animate/ionic-native-transitions.min.js').pipe(gulp.dest('./www/lib/angular-animate'));
     gulp.src('./src/lib/jquery-2.1.1.min.js').pipe(gulp.dest('./www/lib'));
+    gulp.src('./src/lib/external/*').pipe(gulp.dest('./www/lib/external'));
 });
 
 gulp.task('install', ['git-check'], function () {

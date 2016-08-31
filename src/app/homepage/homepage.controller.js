@@ -11,9 +11,9 @@
         .module('starter.homepage')
         .controller('HomepageController', HomepageController);
 
-    HomepageController.$inject = ['$scope', '$ionicLoading', '$ionicPopup', '$state', 'locals'];
+    HomepageController.$inject = ['$scope', '$ionicLoading', '$ionicPopup', '$state', 'locals', '$ionicContentBanner'];
 
-    function HomepageController($scope, $ionicLoading, $ionicPopup, $state, locals) {
+    function HomepageController($scope, $ionicLoading, $ionicPopup, $state, locals, $ionicContentBanner) {
         $scope.loading = function () {
             $ionicLoading.show({
                 template: '加载中，请稍后...'
@@ -24,6 +24,15 @@
                 }, 1500
             );
         };
+        $scope.showInfo = function () {
+            $ionicContentBanner.show({
+                text: ['System Unavailable', 'Please try again later.'],
+                interval: 3000,
+                autoClose: 10000,
+                type: 'info',
+                transition: 'vertical' || 'vertical'
+            });
+        }
         $scope.alert = function () {
             $ionicPopup.alert({
                 title: '提示',

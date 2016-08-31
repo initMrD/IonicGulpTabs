@@ -1,8 +1,8 @@
 angular.module("starter.configs", [])
 
 .constant("ENV", {
-	"devMode": true,
-	"apiUrl": "http://10.70.92.21:7080/oyjt/",
+	"devMode": false,
+	"apiUrl": "http://localhost:3000/api/v1/",
 	"version": "0.0.1",
 	"hotcodeVersion": ".160721"
 })

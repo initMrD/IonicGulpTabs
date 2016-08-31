@@ -1,11 +1,38 @@
 <ion-view view-title="首页" hide-back-button>
     <ion-content class="padding">
         <h2>Welcome to Ionic</h2>
-        class添加 waves-effect waves-lights 点击会有水波效果
-        <button class="button waves-effect waves-lights button-full button-balanced">按钮</button>
-        <div class="waves-effect waves-lights" style="width: 100%;height: 40px">DIV也能有水波效果</div>
-        <button class="button waves-effect waves-lights button-assertive" ng-click="alert()">alert</button>
-        <button class="button waves-effect waves-lights button-positive" ng-click="loading()">loading</button>
-        <button class="button waves-effect waves-lights button-positive" ng-click="exit()">exit</button>
+        <ion-list>
+            <div class="card">
+                <div class="item">
+                    class添加 waves-effect waves-lights <br>点击会有水波效果
+                    <button class="button waves-effect waves-lights button-full button-balanced">按钮</button>
+                    <div class="waves-effect waves-lights" style="width: 100%;height: 40px">DIV也能有水波效果</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="item">
+                    <button class="button button-full waves-effect waves-lights button-assertive" ng-click="alert()">alert</button>
+                    <span>用户需要操作的提示框</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="item">
+                    <button class="button button-full waves-effect waves-lights button-positive" ng-click="loading()">loading</button>
+                    <span>用户不可操作的提示框</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="item">
+                    <button class="button button-full waves-effect waves-lights button-positive" ng-click="exit()">exit</button>
+                    <span>这只是一个退出</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="item">
+                    <button class="button button-full waves-effect waves-lights button-positive" ng-click="showInfo()">Info</button>
+                    <span>显示提示信息</span>
+                </div>
+            </div>
+        </ion-list>
     </ion-content>
 </ion-view>

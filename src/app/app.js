@@ -21,7 +21,10 @@ angular.module('starter', [
     'starter.login',
 
     'templates',
-    'jett.ionic.filter.bar'
+    'ionic-native-transitions',
+    'jett.ionic.scroll.sista',
+    'jett.ionic.filter.bar',
+    'jett.ionic.content.banner'
 ])
 
     .run(function ($ionicPlatform, ENV, $location, $ionicLoading, $ionicHistory) {
